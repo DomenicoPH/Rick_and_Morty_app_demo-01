@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 10px;
+    padding-top: 75px;
+    max-height: calc(100vh - 75px);
+    max-width: 100vw;
+    margin: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.spacer{
+  min-height: 75px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logoimage {
+  height: 500px;
+}
+.logotext{
+  font-family: 'rym';
+  color: greenyellow;
+  margin: 0px;
+  padding: 0px;
+}
+.logoimage{
+  animation: glow-img 2s ease-in-out infinite alternate;
+}
+.logotext{
+  animation: glow-text 2s ease-in-out infinite alternate-reverse;
+}
+@keyframes glow-img {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(137, 43, 226, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px greenyellow);
+  }
+}
+@keyframes glow-text {
+  0% {
+    text-shadow: 0 0 10px blueviolet;
+    color: greenyellow;
+  }
+  100% {
+    text-shadow: 0 0 20px greenyellow;
+    color: yellowgreen;
+  }
+}
+
+.hidden{
+  display: none;
+}
+.empty{
+  display: flex;
+  background-color: pink;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(23, 16, 32);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: greenyellow;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

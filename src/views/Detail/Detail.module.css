@@ -1,0 +1,143 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: yellowgreen;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.containerFavorites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: yellowgreen;
+    min-height: 100vh;
+    max-height: 100vh;
+    animation: animBG 10s linear infinite;
+}
+    @keyframes animBG {
+        0%{background-color: rgba(137, 43, 226, 0.25);}
+        50%{background-color: rgba(137, 43, 226, 0.55);}
+        100%{background-color: rgba(137, 43, 226, 0.25);}
+    }
+
+.subcontainer1{
+    display: flex;
+    justify-content: center;
+    color: yellowgreen;
+    padding: 25px;
+    margin-top: 75px;
+    background-color: rgba(23, 21, 24, 0.5);
+    border-radius: 25px;
+}
+
+.image{
+    padding: 25px;
+    margin-right: 25px;
+    border: 1px solid rgba(153, 205, 50, 0.1);
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 300px;
+    height: 300px;
+    transition: all .5s;
+}
+.image:active{
+    scale: 200%;
+    border-radius: 25px;
+    border: 5px solid greenyellow;
+    padding: 0px;
+}
+
+.infoBlock1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'rym';
+}
+.name{
+    font-size: 2rem;
+    padding: 25px;
+    margin: 0;
+    width: auto;
+    max-width: 400px;
+}
+.idlabel{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: blueviolet;
+}
+.id{
+    font-family: 'museo';
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    padding: 0;
+}
+
+.infoBlock2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'museo';
+    padding: 25px;
+    border: 1px solid rgba(153, 205, 50, 0.1);
+    border-radius: 100px;
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.datalabel{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    color: blueviolet;
+}
+.datainfo{
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    letter-spacing: .25rem;
+}
+.infoBlock2 h2{
+    border: 2px solid rgba(153, 205, 50, 0.05);
+    border-bottom: none;
+    border-left: none;
+    border-radius:  100px 0px 100px 0px;
+    padding: 5px;
+}
+
+.backButton{
+    padding: 25px;
+    margin-top: 25px;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 100px;
+    font-family: 'rym';
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 25px;
+    min-width: 120px;
+}
+.backButton:hover{
+    background-color: blueviolet;
+    box-shadow: 0px 0px 5px blueviolet;
+    color: yellowgreen;
+    cursor: pointer;
+}
+.prev{
+    border-radius: 100px 5px 5px 5px;
+    padding-left: 20px !important;
+}
+.next{
+    border-radius: 5px 5px 100px 5px;
+    padding-right: 20px !important;
+}
+.back{
+    border-radius: 5px;
+    min-width: 80px !important;
+}

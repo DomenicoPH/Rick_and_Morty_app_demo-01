@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(23, 16, 32);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'rym';
+  src: url('./assets/fonts/get_schwifty.ttf') format('truetype')
+}
+
+/**/
+
+@font-face {
+  font-family: 'museo';
+  src: url('./assets/fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'museo-italic';
+  src: url('./assets/fonts/MuseoModerno-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+/**/
+
+@font-face {
+  font-family: 'archivo';
+  src: url('./assets/fonts/Archivo-VariableFont_wdth_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'archivo-italic';
+  src: url('./assets/fonts/Archivo-Italic-VariableFont_wdth_wght.ttf') format('truetype');
+}
+
+/**/
+
+@font-face {
+  font-family: 'arcade';
+  src: url('./assets/fonts/Arcade.ttf') format('truetype')
+}

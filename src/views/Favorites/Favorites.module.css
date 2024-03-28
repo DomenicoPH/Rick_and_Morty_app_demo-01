@@ -1,0 +1,7 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(137, 43, 226, 0.25);
+    min-height: 100vh;
+    overflow-y: hidden;
+}

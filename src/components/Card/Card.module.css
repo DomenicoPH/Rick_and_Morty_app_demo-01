@@ -1,0 +1,110 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(25,25,25);
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2.5px;
+    width: 150px;
+    max-width: 150px;
+}
+.container:hover, .container:hover .cardImg{
+    background-color: rgba(137, 43, 226, 0.4);
+    box-shadow: 0px 0px 15px rgba(172, 255, 47, 0.5);
+}
+
+.containerFavorite{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(137, 43, 226, 0.4);
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2.5px;
+    width: 150px;
+    max-width: 150px;
+}
+.containerFavorite:hover, .containerFavorite:hover .cardImg  {
+    background-color: rgba(137, 43, 226, 0.8);
+    box-shadow: 0px 0px 15px rgba(137, 43, 226, 0.5);
+}
+
+.topContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(154, 205, 50, 0.2);
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+    .cardClose, .cardFav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellowgreen;
+        border-radius: 5px;
+
+        border: none;
+
+        min-height: 25px;
+        min-width: 25px;
+        max-height: 25px;
+        max-width: 25px;
+    }
+    .cardClose img {
+        max-width: 25px;
+        max-height: 25px;
+    }
+    .cardFav img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+        .cardClose:hover{
+            background-color: firebrick;
+        }
+        .cardFav:hover{
+            background-color: blueviolet;
+        }
+    .cardTitleId{
+        font-family: 'rym';
+        font-size: 1.5rem;
+        color: yellowgreen;
+        margin: 5px;
+        margin: 0;
+    }
+
+.cardData{
+    font-family: 'archivo';
+    font-weight: 300;
+    font-size: 1rem;
+    color: yellowgreen;
+    line-height: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(154, 205, 50, 0.2);
+    margin: 2.5px;
+}
+    .cardDataName{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'rym';
+        font-weight: 100;
+        font-size: 1rem;
+        color: yellowgreen;
+        padding-bottom: 5px;
+        margin: 2.5px;
+
+    }
+
+.cardImg{
+    display: flex;
+    margin: 10px auto;
+    border-radius: 500px;
+    width: 150px;
+}
+.cardImg:hover{
+    cursor: pointer;
+}
