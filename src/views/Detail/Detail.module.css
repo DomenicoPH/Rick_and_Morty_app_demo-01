@@ -23,14 +23,20 @@
         100%{background-color: rgba(137, 43, 226, 0.25);}
     }
 
-.subcontainer1{
+.infoBlockContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: yellowgreen;
-    padding: 25px;
-    margin-top: 75px;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(23, 21, 24, 0.5);
     border-radius: 25px;
+}
+
+.infoBlock{
+    display: flex;
 }
 
 .image{
@@ -129,14 +135,7 @@
     color: yellowgreen;
     cursor: pointer;
 }
-.prev{
-    border-radius: 100px 5px 5px 5px;
-    padding-left: 20px !important;
-}
-.next{
-    border-radius: 5px 5px 100px 5px;
-    padding-right: 20px !important;
-}
+
 .back{
     border-radius: 5px;
     min-width: 80px !important;
