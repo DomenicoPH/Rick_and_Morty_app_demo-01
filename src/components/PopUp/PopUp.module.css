@@ -31,7 +31,7 @@
     background-color: rgba(10, 0, 25, 0.9);
     border: 1px solid rgba(172, 255, 47, 0.2);
     border-radius: 10px;
-    animation: glow-img 2s linear infinite alternate;
+    animation: glow-img 2s linear infinite alternate, popup .5s;
 }
 @keyframes glow-img {
   0% {
@@ -40,6 +40,17 @@
   100% {
     filter: drop-shadow(0 0 10px rgba(172, 255, 47, 0.5));
   }
+}
+@keyframes popup {
+    0%{
+        scale: 0%;
+    }
+    30%{
+        scale: 110%;
+    }
+    100%{
+        scale: 100%;
+    }
 }
 
 .topContainer{
