@@ -8,6 +8,7 @@ import Nav from './components/Nav/Nav.jsx';
 import Cards from './components/Cards/Cards.jsx';
 import Favorites from './views/Favorites/Favorites.jsx';
 import Detail from './views/Detail/Detail.jsx';
+import PopUp from './components/PopUp/PopUp.jsx';
 import './App.css';
 
 function App() {
@@ -16,10 +17,26 @@ function App() {
    const CHAR_URL = "https://rickandmortyapi.com/api/character";
    const EP_URL = "https://rickandmortyapi.com/api/episode";
 
+   const messages = {
+      error1: 'Characters limit reached',
+      error2: 'Character already called',
+      error3: 'Character not found',
+      error4: 'Invalid ID',
+   }
+
    // Estados:
    const [allCharacters, setAllCharacters] = useState([]);
    const [characters, setCharacters] = useState([]);
+
    const [access, setAccess] = useState(false); //ABIERTO, cambiar a 'false'
+
+   const [alertActive, setAlertActive] = useState(false)
+   const [popupMessage, setPopupMessage] = useState('')
+
+   const handlePopUp = (message) => {
+      setPopupMessage(message)   //Establece cual es el mensaje.
+      setAlertActive(!alertActive)  //Establece si el popup es visible o no.
+   }
 
    useEffect(() => {
       const fetchAllCharacters = async () => {
@@ -88,18 +105,21 @@ function App() {
    } */
    const onSearch = (id) => {
       if(!id){
-         alert('Invalid ID');
+         /* alert('Invalid ID'); */
+         handlePopUp(messages.error4)
          return;
       }
       const character = allCharacters.find(char => char.id == id);
       if(character){
          if(characters.some(char => char.id === character.id)){
-            alert('Character already called')
+            /* alert('Character already called') */
+            handlePopUp(messages.error2)
          } else {
             setCharacters(prevChars => [...prevChars, character])
          }
       } else {
-         alert('Character not found')
+         /* alert('Character not found') */
+         handlePopUp(messages.error3)
       }
    };
 
@@ -130,7 +150,8 @@ function App() {
       let randomId;
       let totalCharacters = allCharacters.length;
       if(characters.length === totalCharacters){
-         alert("Characters limit reached")
+         /* alert("Characters limit reached") */
+         handlePopUp(messages.error1)
          return;
       }
       do{
@@ -164,6 +185,7 @@ function App() {
    return (
       <div className='App'>
          
+         {alertActive && <PopUp handlePopUp={handlePopUp} message={popupMessage}/>}
          {location.pathname !== '/' && <Nav onSearch={onSearch} onRandom={onRandom} charactersCount={charactersCount} clearAll={clearAll} showAll={showAll} logout={logout} />}
          
          <Routes>
