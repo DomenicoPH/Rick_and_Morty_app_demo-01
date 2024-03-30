@@ -108,3 +108,39 @@
 .cardImg:hover{
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 920px){
+    .container{
+        flex-direction: row-reverse;
+        align-items: center;
+        min-width: 100vw;
+        margin: 0px;
+    }
+    .containerFavorite{
+        flex-direction: row-reverse;
+        align-items: center;
+        min-width: 100vw;
+        margin: 0px;
+    }
+    .topContainer{
+        flex-direction: column;
+        border: none;
+        margin: 8px;
+    }
+    .cardClose, .cardFav{
+        min-height: 45px;
+        min-width: 45px;
+        max-height: 45px;
+        max-width: 45px;
+        border-radius: 100px;
+    }
+    .cardDataName{
+        margin-left: 25px;
+        min-width: 200px;
+    }
+    .cardImg{
+        width: 100px;
+        height: 100px;
+    }
+}

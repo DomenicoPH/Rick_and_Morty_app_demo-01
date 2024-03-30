@@ -99,3 +99,9 @@
 .botonLogOut:hover + .logout{
     display: block;
 }
+
+@media screen and (max-width: 920px){
+    .container{
+        display: none;
+    }
+}

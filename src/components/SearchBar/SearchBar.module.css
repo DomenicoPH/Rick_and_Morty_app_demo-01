@@ -41,3 +41,13 @@ input::placeholder{
     font-family: 'rym';
     font-size: 1rem;
 }
+
+@media screen and (max-width: 1500px){
+    .container{
+        border: none;
+        width: auto;
+    }
+    .indicador{
+        display: none;
+    }
+}

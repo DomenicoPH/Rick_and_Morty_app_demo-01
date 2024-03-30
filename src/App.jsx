@@ -1,10 +1,11 @@
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import axios, { all } from 'axios';
+import axios from 'axios';
 import Form from './components/Form/Form.jsx';
 import Error from './views/Error/Error.jsx';
 import About from './views/About/About.jsx';
 import Nav from './components/Nav/Nav.jsx';
+import NavSimple from './components/NavSimple/NavSimple.jsx';
 import Cards from './components/Cards/Cards.jsx';
 import Favorites from './views/Favorites/Favorites.jsx';
 import Detail from './views/Detail/Detail.jsx';
@@ -187,6 +188,7 @@ function App() {
          
          {alertActive && <PopUp handlePopUp={handlePopUp} message={popupMessage}/>}
          {location.pathname !== '/' && <Nav onSearch={onSearch} onRandom={onRandom} charactersCount={charactersCount} clearAll={clearAll} showAll={showAll} logout={logout} />}
+         {location.pathname !== '/' && <NavSimple onSearch={onSearch} onRandom={onRandom} charactersCount={charactersCount} clearAll={clearAll} showAll={showAll} logout={logout} />}
          
          <Routes>
             <Route 

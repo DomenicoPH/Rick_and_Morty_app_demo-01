@@ -35,3 +35,9 @@
     color: yellowgreen;
     width: 50px;
 }
+
+@media screen and (max-width: 920px){
+    .container{
+        padding-top: 30px;
+    }
+}
