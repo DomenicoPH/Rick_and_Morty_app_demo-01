@@ -117,3 +117,24 @@
         box-shadow: 0px 0px 150px greenyellow;
     }
 }
+
+@media screen and (max-width: 920px){
+    .form{
+        width: 300px;
+    }
+    .logo{
+        max-height: 150px;
+    }
+    .logoImg{
+        position: relative;
+        bottom: 140px;
+    }
+    .block{
+        flex-direction: column;
+    }
+    .error{
+        text-align: center;
+        padding: 10px 25px;
+        line-height: 10px;
+    }
+}

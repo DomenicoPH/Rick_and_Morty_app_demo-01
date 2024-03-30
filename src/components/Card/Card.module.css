@@ -138,6 +138,8 @@
     .cardDataName{
         margin-left: 25px;
         min-width: 200px;
+        max-width: 200px;
+        font-weight: bolder;
     }
     .cardImg{
         width: 100px;

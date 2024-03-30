@@ -50,3 +50,18 @@
     background-color: rgba(20, 20, 20, 1);
   }
 }
+
+@media screen and (max-width: 920px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+  }
+  .container h1{
+    margin-top: 300px;
+  }
+  .image{
+      height: 150px;
+      width: 150px;
+  }
+}

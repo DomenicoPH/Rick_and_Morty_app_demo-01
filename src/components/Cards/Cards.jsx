@@ -13,8 +13,8 @@ export default function Cards({characters, onClose}) {
    return (
       <div className={style.superContainer}>
 
-         {location.pathname === '/home' && characters.length === 0 && <div className={style.spacer}></div>}
-         {location.pathname === '/favorites' && characters.length === 0 && <div className={style.spacer}></div>}
+         {location.pathname === '/home' && characters.length === 0 && <div className={style.spacerHome}></div>}
+         {location.pathname === '/favorites' && characters.length === 0 && <div className={style.spacerFav}></div>}
          {location.pathname === '/favorites' && filtered.length === 0 && <OrderFilter filtered={characters}/>}
          <div className={characters.length === 0 ? style.logo : style.hidden}>
             <img className={style.logoimage} src={logo} alt='Rick & Morty Logo' />
