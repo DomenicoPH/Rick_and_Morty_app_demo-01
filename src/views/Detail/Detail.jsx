@@ -32,32 +32,21 @@ const Detail = ({allCharacters, favorites}) => {
     return(
         <div className={isFavorite ? style.containerFavorites : style.container}>
 
-                <div className={style.infoBlockContainer}>
-
                     <div className={style.infoBlock}>
 
-                        <div className={style.infoBlock1}>
-                            <h1 className={style.name}>{character.name}</h1>
-                            <img className={style.image} src={character.image} alt={character.name} />
-                            <h1 className={style.id}><span className={style.idlabel}>Character ID: </span>{character.id}</h1>
-                        </div>
+                        <h1 className={style.name}>{character.name}</h1>
+                        <img className={style.image} src={character.image} alt={character.name} />
+                        <h1 className={style.id}><span className={style.idlabel}>Character ID: </span>{character.id}</h1>
+                        {character.status && (<div className={style.dataContainer}><span className={style.datalabel}>Status: </span> <h2 className={style.datainfo}>{character.status}</h2></div>)}
+                        {character.species && (<div className={style.dataContainer}><span className={style.datalabel}>Specie: </span> <h2 className={style.datainfo}>{character.species}</h2></div>)}
+                        {character.gender && (<div className={style.dataContainer}><span className={style.datalabel}>Gender: </span> <h2 className={style.datainfo}>{character.gender}</h2></div>)}
+                        {character.type && (<div className={style.dataContainer}><span className={style.datalabel}>Type: </span> <h2 className={style.datainfo}>{character.type}</h2></div>)}
+                        {character.origin && (<div className={style.dataContainer}><span className={style.datalabel}>First seen in: </span> <h2 className={style.datainfo}>{character.origin.name}</h2></div>)}
+                        {character.location && (<div className={style.dataContainer}><span className={style.datalabel}>Last known location: </span> <h2 className={style.datainfo}>{character.location.name}</h2></div>)}
 
-                        <div className={style.infoBlock2}>
-                            {character.status && (<div><span className={style.datalabel}>Status: </span> <h2 className={style.datainfo}>{character.status}</h2></div>)}
-                            {character.species && (<div><span className={style.datalabel}>Specie: </span> <h2 className={style.datainfo}>{character.species}</h2></div>)}
-                            {character.gender && (<div><span className={style.datalabel}>Gender: </span> <h2 className={style.datainfo}>{character.gender}</h2></div>)}
-                            {character.type && (<div><span className={style.datalabel}>Type: </span> <h2 className={style.datainfo}>{character.type}</h2></div>)}
-                            {character.origin && (<div><span className={style.datalabel}>First seen in: </span> <h2 className={style.datainfo}>{character.origin.name}</h2></div>)}
-                            {character.location && (<div><span className={style.datalabel}>Last known location: </span> <h2 className={style.datainfo}>{character.location.name}</h2></div>)}
-                        </div>
+                        <Link className={style.backButton} to={handleBack()}>Back</Link>
 
                     </div>
-
-                    <Link className={style.backButton} to={handleBack()}>
-                        <div>Back</div>
-                    </Link>
-
-                </div>
 
         </div>
     )

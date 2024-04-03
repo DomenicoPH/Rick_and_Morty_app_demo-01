@@ -100,6 +100,24 @@
     display: block;
 }
 
+@media screen and (max-width: 1400px){
+    .logo{
+        display: none;
+    }
+    .spacer{
+        display: none;
+    }
+    .count{
+        display: none;
+    }
+    .boton{
+        margin: 1px;
+    }
+    .container{
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 920px){
     .container{
         display: none;

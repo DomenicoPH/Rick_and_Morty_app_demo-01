@@ -157,12 +157,12 @@
     
     .boton{
         background-color: rgb(40, 40, 40);
-        border-radius: 100px;
+        border-radius: 10px;
         border: none;
         font-family: 'rym';
         font-size: 1rem;
         color: greenyellow;
-        height: 100px;
+        height: 40px;
         width: 100px;
         padding: 0 10px;
         margin: 0px 10px;

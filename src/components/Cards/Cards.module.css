@@ -90,8 +90,8 @@
 
   @media screen and (max-width: 920px){
     .container{
-      padding-top: 275px;
-      max-height: calc(100vh - 275px);
+      padding-top: 165px;
+      max-height: calc(100vh - 165px);
     }
     .logoimage{
       margin-top: 300px;

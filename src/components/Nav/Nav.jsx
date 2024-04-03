@@ -8,7 +8,7 @@ export default function Nav(props){
     return (
         <div className={style.container}>
             <img className={style.logo} src={logo} alt="Logo Rick & Morty" />
-            <div></div>
+            <div className={style.spacer}></div>
             
             <div className={style.middle}>
                 <Link to={'/about'}>
