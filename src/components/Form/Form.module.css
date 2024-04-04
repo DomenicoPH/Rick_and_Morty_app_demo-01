@@ -7,14 +7,26 @@
     background-size: cover;
     background-position: center;
 }
+.subcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.rymlogo{
+    width: 500px;
+    margin-bottom: 15px;
+}
 
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    padding-top: 20px;
     width: 400px;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 25px greenyellow;
     animation: glow 2s linear infinite;
@@ -61,7 +73,7 @@
 
 .submitButton{
     background-color: yellowgreen;
-    border-radius: 0px 0px 23px 23px;
+    border-radius: 0px 0px 10px 10px;
     border: none;
     height: 50px;
     margin: 0px;
@@ -73,6 +85,28 @@
     
 }
 .submitButton:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.freepassbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    border: none;
+    width: 400px;
+    height: 50px;
+    margin: 0px;
+    margin-top: 10px;
+    font-family: 'rym';
+    font-size: 1.25rem;
+    letter-spacing: .5rem;
+    color: rgb(67, 18, 114);
+    animation: glow 2s linear infinite;
+}
+.freepassbutton:hover{
     background-color: greenyellow;
     cursor: pointer;
 }
@@ -108,17 +142,20 @@
 
 @keyframes glow {
     0%{
-        box-shadow: 0px 0px 150px greenyellow;
+        box-shadow: 0px 0px 150px rgba(172, 255, 47, 0.5);
     }
     50%{
-        box-shadow: 0px 0px 300px greenyellow;
+        box-shadow: 0px 0px 200px greenyellow;
     }
     100%{
-        box-shadow: 0px 0px 150px greenyellow;
+        box-shadow: 0px 0px 150px rgba(172, 255, 47, 0.5);
     }
 }
 
 @media screen and (max-width: 920px){
+    .rymlogo{
+        width: 350px;
+    }
     .form{
         width: 300px;
     }
@@ -136,5 +173,8 @@
         text-align: center;
         padding: 10px 25px;
         line-height: 10px;
+    }
+    .freepassbutton{
+        width: 300px;
     }
 }

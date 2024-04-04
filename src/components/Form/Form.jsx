@@ -1,7 +1,7 @@
 import style from './Form.module.css'
+import rym from '../../assets/img/rym.svg'
 import { useState } from 'react'
 import validation from './validation';
-import logo from '../../assets/img/rym-banner-1.webp'
 
 const Form = (props) => {
 
@@ -31,49 +31,59 @@ const Form = (props) => {
         //console.log(errors)
     }
 
+    // handler del acceso con user y password
     const handleSubmit = (e) => {
         e.preventDefault()
         props.login(userData)
     }
 
+    // handler del acceso libre
+    const handleFreePass = () => {
+        props.freepass()
+    }
+
     return (
         <div className={style.container}>
 
-            <form className={style.form} onSubmit={handleSubmit}>
+            <div className={style.subcontainer}>
 
-                <div className={style.logo}>
-                    <img className={style.logoImg} src={logo} alt="Rick & Morty" />
-                </div>
+                <img className={style.rymlogo} src={rym} alt="Rick and Morty logo" />
 
-                <div className={style.block}>
-                    <label className={style.label} htmlFor="">Username: </label>
-                    <input 
-                        className={style.input}
-                        type='email' 
-                        name='username'
-                        value={userData.username}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                
-                <span className={style.error}>{errors.username && errors.username}</span>
+                <form className={style.form} onSubmit={handleSubmit}>
 
-                <div className={style.block}>
-                    <label className={style.label} htmlFor="">Password: </label>
-                    <input 
-                        className={style.input}
-                        type='password'
-                        name='password'
-                        value={userData.password}
-                        onChange={handleInputChange} 
-                    />
-                </div>
+                    <div className={style.block}>
+                        <label className={style.label} htmlFor="">Username: </label>
+                        <input 
+                            className={style.input}
+                            type='email' 
+                            name='username'
+                            value={userData.username}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                <span className={style.error}>{errors.password && errors.password}</span>
+                    <span className={style.error}>{errors.username && errors.username}</span>
 
-                <button className={style.submitButton} type='submit'>Login</button>
+                    <div className={style.block}>
+                        <label className={style.label} htmlFor="">Password: </label>
+                        <input 
+                            className={style.input}
+                            type='password'
+                            name='password'
+                            value={userData.password}
+                            onChange={handleInputChange} 
+                        />
+                    </div>
 
-            </form>
+                    <span className={style.error}>{errors.password && errors.password}</span>
+
+                    <button className={style.submitButton} type='submit'>Login</button>
+
+                </form>
+
+                <button onClick={handleFreePass} className={style.freepassbutton}>Free Pass</button>
+
+            </div>
 
             <p className={style.credits}>An App created by Gnomono © 2024</p>
 

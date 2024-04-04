@@ -82,6 +82,12 @@ function App() {
          navigate('/')
       }
 
+      // free pass
+      const freepass = () => {
+         setAccess(true)
+         navigate('/home')
+      }
+
    // Función onSearch BORRAR
    /* function onSearch(id) {
       if(!id) return alert('Ingresa un ID')
@@ -193,7 +199,7 @@ function App() {
          <Routes>
             <Route 
                exact path='/'
-               element={<Form login={login}/>}
+               element={<Form login={login} freepass={freepass}/>}
             />
             <Route 
                path='/home' 
