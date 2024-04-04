@@ -142,3 +142,36 @@
 
     }
 }
+
+@media screen and (max-height: 900px) and (max-width: 920px){
+    .image{
+        height: 120px;
+        width: 120px;
+    }
+    .dataContainer{
+        margin: 0;
+        padding: 0;
+        height: 20px;
+        max-width: 100%;
+        border-top: 1px solid rgba(172, 255, 47, 0.1);
+    }
+    .datalabel{
+        font-size: .6rem;
+    }
+    .datainfo{
+        font-size: .6rem;
+    }
+    .idlabel{
+        font-size: .6rem;
+    }
+    .id{
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-height: 650px) and (max-width: 920px){
+    .infoBlock{
+        justify-content: flex-end;
+        padding-bottom: 20px;
+    }
+}
