@@ -1,7 +1,8 @@
 import style from './PopUp.module.css'
-import rick from '../../assets/img/rick.png'
 import close from '../../assets/img/close.svg'
 import { useEffect } from 'react'
+
+const rick = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712457877/rick_and_morty/rick_fxx0pc.png'
 
 const PopUp = ({handlePopUp, message}) => {
 

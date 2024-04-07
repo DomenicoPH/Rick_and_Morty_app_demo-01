@@ -1,9 +1,10 @@
 import Card from '../Card/Card';
 import OrderFilter from '../OrderFilter/OrderFilter';
 import style from '../Cards/Cards.module.css'
-import logo from '../../assets/img/rmlogo.png'
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
+const logo = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428822/rick_and_morty/rmlogo_dxntuf.png'
 
 export default function Cards({characters, onClose}) {
 

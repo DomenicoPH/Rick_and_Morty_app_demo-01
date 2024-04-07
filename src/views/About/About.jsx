@@ -1,5 +1,6 @@
 import style from './About.module.css'
-import gnomono from '../../assets/img/greenlogo.png'
+
+const gnomono = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428812/rick_and_morty/greenlogo_v32zbe.png'
 
 const About = () => {
     return(
