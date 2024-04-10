@@ -27,10 +27,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: rgba(10, 10, 10, 0.8);
     border-radius: 15px;
     padding: 25px;
-    margin-top: 50px;
     min-width: 50vw;
 }
 
@@ -76,7 +76,12 @@
 }
 
 .dataContainer{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    border-top: 2px solid rgba(153, 205, 50, 0.05);
+    padding-bottom: 5px;
 }
 .datalabel{
     padding: 0;
@@ -89,10 +94,8 @@
 .datainfo{
     padding: 0;
     margin: 0;
-    margin-top: 5px;
     font-size: .8rem;
     letter-spacing: .25rem;
-    border-top: 2px solid rgba(153, 205, 50, 0.05);
     padding: 5px;
 }
 
@@ -133,9 +136,12 @@
         justify-content: center;
         align-items: center;
     }
+    .dataContainerFixed{
+        flex-direction: column;
+    }
     .datalabel{
-        padding: 0;
-        margin: 0;
+        padding: 1px;
+        margin: 1px;
     }
     .datainfo{
         padding: 0;
@@ -147,14 +153,16 @@
 @media screen and (max-width: 920px){
 
     .dataContainer{
-        border-top: 1px solid rgba(0, 128, 0, 0.1);
+        border-top: 2px solid rgba(0, 128, 0, 0.05);
         margin-top: 2px;
+        min-width: 280px;
     }
     .datainfo{
         border-top: none;
     }
     .name{
         padding: 5px;
+        margin-top: 50px;
     }
 }
 
@@ -164,23 +172,29 @@
         width: 120px;
     }
     .dataContainer{
-        margin: 0;
-        padding: 0;
         height: 20px;
-        max-width: 100%;
-        border-top: 1px solid rgba(172, 255, 47, 0.1);
+        border-top: 2px solid rgba(172, 255, 47, 0.05);
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .dataContainerFixed{
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     .datalabel{
-        font-size: .6rem;
+        font-size: .5rem;
     }
     .datainfo{
-        font-size: .6rem;
+        font-size: .5rem;
     }
     .idlabel{
-        font-size: .6rem;
+        font-size: .5rem;
     }
     .id{
-        font-size: .6rem;
+        font-size: .5rem;
+    }
+    .name{
+        margin-top: 150px;
     }
 }
 
@@ -188,5 +202,22 @@
     .infoBlock{
         justify-content: flex-end;
         padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-height: 920px){
+    .infoBlock{
+        min-width: 100%;
+        min-height: 100vh;
+        padding: 0;
+    }
+    .dataContainer{
+        max-width: 50%;
+    }
+    .name{
+        padding: 5px;
+    }
+    .image{
+        margin: 5px;
     }
 }

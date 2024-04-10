@@ -41,8 +41,8 @@ const Detail = ({allCharacters, favorites}) => {
                         {character.species && (<div className={style.dataContainer}><span className={style.datalabel}>Specie: </span> <h2 className={style.datainfo}>{character.species}</h2></div>)}
                         {character.gender && (<div className={style.dataContainer}><span className={style.datalabel}>Gender: </span> <h2 className={style.datainfo}>{character.gender}</h2></div>)}
                         {character.type && (<div className={style.dataContainer}><span className={style.datalabel}>Type: </span> <h2 className={style.datainfo}>{character.type}</h2></div>)}
-                        {character.origin && (<div className={style.dataContainer}><span className={style.datalabel}>First seen in: </span> <h2 className={style.datainfo}>{character.origin.name}</h2></div>)}
-                        {character.location && (<div className={style.dataContainer}><span className={style.datalabel}>Last known location: </span> <h2 className={style.datainfo}>{character.location.name}</h2></div>)}
+                        {character.origin && (<div className={`${style.dataContainer} ${style.dataContainerFixed}`}><span className={style.datalabel}>First seen in: </span> <h2 className={style.datainfo}>{character.origin.name}</h2></div>)}
+                        {character.location && (<div className={`${style.dataContainer} ${style.dataContainerFixed}`}><span className={style.datalabel}>Last known location: </span> <h2 className={style.datainfo}>{character.location.name}</h2></div>)}
 
                         <Link className={style.backButton} to={handleBack()}>Back</Link>
 
