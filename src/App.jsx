@@ -12,8 +12,6 @@ import Detail from './views/Detail/Detail.jsx';
 import PopUp from './components/PopUp/PopUp.jsx';
 import './App.css';
 
-//testing commit before updating...
-
 function App() {
 
    //URL
@@ -35,6 +33,8 @@ function App() {
 
    const [alertActive, setAlertActive] = useState(false)
    const [popupMessage, setPopupMessage] = useState('')
+
+   const [demoUser, setDemoUser] = useState(null)
 
    const handlePopUp = (message) => {
       setPopupMessage(message)   //Establece cual es el mensaje.
@@ -63,13 +63,21 @@ function App() {
    },[])
 
       // Datos de acceso:
-      const USERNAME = 'test@test.com';
-      const PASSWORD = '123456';
+      const DEMO_CREDENTIALS = {
+         username: 'test@test.com',
+         password: '123456',
+      }
+
+      const useDemoCredentials = () => {
+        setDemoUser(DEMO_CREDENTIALS)
+        setAlertActive(false)
+      }
+
       const navigate = useNavigate()
 
       // Login
       function login(userData){
-         if(userData.password === PASSWORD && userData.username === USERNAME){
+         if(userData.password === DEMO_CREDENTIALS.password && userData.username === DEMO_CREDENTIALS.username){
             setAccess(true);
             navigate('/home')
          }
@@ -201,7 +209,13 @@ function App() {
          <Routes>
             <Route 
                exact path='/'
-               element={<Form login={login} freepass={freepass}/>}
+               element={<Form 
+                  login={login} 
+                  freepass={freepass} 
+                  useDemoCredentials={useDemoCredentials}
+                  demoUser={demoUser}
+                  demoCredentials={DEMO_CREDENTIALS}
+               />}
             />
             <Route 
                path='/home' 

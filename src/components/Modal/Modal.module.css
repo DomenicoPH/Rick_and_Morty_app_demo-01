@@ -1,0 +1,71 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: rgba(2, 6, 23, 0.95);
+  color: yellowgreen;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(172, 255, 47, 0.2);
+  animation: fadeIn 0.25s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(172, 255, 47, 0.3);
+}
+
+.close {
+  background: none;
+  border: none;
+  color: yellowgreen;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.confirmButton {
+  background-color: yellowgreen;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirmButton:hover {
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
