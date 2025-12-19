@@ -12,6 +12,8 @@ import Detail from './views/Detail/Detail.jsx';
 import PopUp from './components/PopUp/PopUp.jsx';
 import './App.css';
 
+//testing commit before updating...
+
 function App() {
 
    //URL
