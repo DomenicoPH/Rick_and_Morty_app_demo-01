@@ -111,7 +111,7 @@ const Form = ({login, freepass, useDemoCredentials, demoUser, demoCredentials}) 
 
             <p className={style.credits}>This App was created using <FaReact/> React <SiVite/> Vite and <SiRedux/> Redux by &copy; Gnomono - 2024</p>
 
-            //..Modal..
+
             <Modal
               isOpen={showModal}
               onClose={() => setShowModal(false)}
