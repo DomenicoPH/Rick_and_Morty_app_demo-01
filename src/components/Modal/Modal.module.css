@@ -26,6 +26,12 @@
   border-bottom: 1px solid rgba(172, 255, 47, 0.3);
 }
 
+.title{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .close {
   background: none;
   border: none;
@@ -43,10 +49,13 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .confirmButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   background-color: yellowgreen;
   border: none;
   padding: 8px 16px;

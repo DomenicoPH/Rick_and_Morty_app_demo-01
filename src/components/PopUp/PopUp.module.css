@@ -1,5 +1,5 @@
-.container{
-    background-color: rgba(0, 0, 0, 0.7);
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -7,15 +7,6 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    animation: bg .5s;
-}
-@keyframes bg{
-    0%{
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0.7);
-    }
 }
 
 /* ----------- Arriba: fondo transparente ----------- Abajo: ventana: message ----------- */
@@ -28,76 +19,56 @@
     font-size: 2rem;
     color: white;
     min-width: 500px;
-    background-color: rgba(10, 0, 25, 0.9);
-    border: 1px solid rgba(172, 255, 47, 0.2);
+    background-color: rgba(2, 6, 23, 0.95);
+    box-shadow: 0 0 30px rgba(172, 255, 47, 0.2);
     border-radius: 10px;
-    animation: glow-img 2s linear infinite alternate, popup .5s;
-}
-@keyframes glow-img {
-  0% {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
-  }
-  100% {
-    filter: drop-shadow(0 0 10px rgba(172, 255, 47, 0.5));
-  }
-}
-@keyframes popup {
-    0%{
-        scale: 0%;
-    }
-    30%{
-        scale: 110%;
-    }
-    100%{
-        scale: 100%;
-    }
 }
 
 .topContainer{
     display: flex;
     justify-content: flex-end;
-    background-color: greenyellow;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
-    box-shadow: 1px 0px 10px greenyellow;
+
 }
 .closeButton{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: greenyellow;
+    background-color: transparent;
+    color: yellowgreen;
+    margin: 5px;
     border: none;
     border-radius: 0px 10px 0px 0px;
-}
-.closeButton img{
-    scale: 100%;
-    transition: scale .2s ease-in-out;
+    cursor: pointer;
 }
 .closeButton:hover{
-    cursor: pointer;
+    color: greenyellow;
 }
 .closeButton:hover img{
     scale: 120%;
 }
 
 .imageContainer{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     overflow: hidden;
-    border: 10px solid greenyellow;
+    border: 10px solid yellowgreen;
     background-color: blueviolet;
     border-radius: 100px;
     margin-top: 50px;
-    box-shadow: 1px 0px 10px greenyellow;
 }
 .rick{
-    height: 150px;
+    height: 100px;
     scale: 150%;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-right: 25px;
 }
 .messageText{
-    font-family: 'rym';
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'museo';
     font-size: 1rem;
     letter-spacing: .2rem;
     color: greenyellow;

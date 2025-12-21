@@ -177,6 +177,23 @@
     margin: 0;
 }
 
+/* Modal */
+.modal_div_p{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.modal_p{
+    font-style: italic;
+}
+.modal_credentials{
+    border: 1px dashed rgba(172, 255, 47, 0.3);
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 @keyframes imageSlide {
     0%{
         transform: translateX(0%);

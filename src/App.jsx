@@ -10,7 +10,6 @@ import Cards from './components/Cards/Cards.jsx';
 import Favorites from './views/Favorites/Favorites.jsx';
 import Detail from './views/Detail/Detail.jsx';
 import PopUp from './components/PopUp/PopUp.jsx';
-import './App.css';
 
 function App() {
 
@@ -64,24 +63,33 @@ function App() {
 
       // Datos de acceso:
       const DEMO_CREDENTIALS = {
-         username: 'test@test.com',
-         password: '123456',
+         username: 'rick@morty.com',
+         password: 'earth-c137',
       }
 
       const useDemoCredentials = () => {
         setDemoUser(DEMO_CREDENTIALS)
-        setAlertActive(false)
       }
 
       const navigate = useNavigate()
 
       // Login
-      function login(userData){
+      /*function login(userData){
          if(userData.password === DEMO_CREDENTIALS.password && userData.username === DEMO_CREDENTIALS.username){
             setAccess(true);
             navigate('/home')
          }
+      }*/
+
+      function login(userData){
+         if(userData.username !== DEMO_CREDENTIALS.username) return 'Invalid username'
+         if(userData.password !== DEMO_CREDENTIALS.password) return 'Invalid password'
+         setAccess(true);
+         navigate('/home');
+         return null;
       }
+
+      // Automatic logout
       useEffect(() => {
          !access && navigate('/');
       }, [access]);
@@ -211,6 +219,7 @@ function App() {
                exact path='/'
                element={<Form 
                   login={login} 
+                  handlePopUp={handlePopUp}
                   freepass={freepass} 
                   useDemoCredentials={useDemoCredentials}
                   demoUser={demoUser}

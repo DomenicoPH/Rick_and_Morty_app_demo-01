@@ -21,7 +21,7 @@ export const Modal = ({
                 onClick={e => e.stopPropagation()}
             >
                 <header className={style.header}>
-                    <h2>{title}</h2>
+                    <h2 className={style.title}>{title}</h2>
                     <button
                         className={style.close}
                         onClick={onClose}
