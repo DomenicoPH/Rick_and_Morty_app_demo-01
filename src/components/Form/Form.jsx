@@ -12,7 +12,6 @@ import { FaKey } from "react-icons/fa";
 
 const Form = ({
   login,
-  //freepass,
   useDemoCredentials,
   demoUser,
   demoCredentials,
@@ -62,9 +61,6 @@ const Form = ({
         handlePopUp(error);
     }
   };
-
-  // handler del acceso libre
-  //const handleFreePass = () => { freepass() };
 
   // Confirm button del Modal
   const handleConfirmModal = () => {
@@ -127,7 +123,6 @@ const Form = ({
           </button>
         </form>
 
-        {/* <button onClick={handleFreePass} className={style.freepassbutton}>Free Pass</button> */}
       </div>
 
       <p className={style.credits}>
