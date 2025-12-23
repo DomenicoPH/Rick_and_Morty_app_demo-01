@@ -61,73 +61,46 @@ function App() {
       fetchAllCharacters();
    },[])
 
-      // Datos de acceso:
-      const DEMO_CREDENTIALS = {
-         username: 'rick@morty.com',
-         password: 'earth-c137',
-      }
+   // Datos de acceso:
+   const DEMO_CREDENTIALS = {
+      username: 'rick@morty.com',
+      password: 'earth-c137',
+   }
 
-      const useDemoCredentials = () => {
-        setDemoUser(DEMO_CREDENTIALS)
-      }
+   const useDemoCredentials = () => {
+     setDemoUser(DEMO_CREDENTIALS)
+   }
 
-      const navigate = useNavigate()
+   const navigate = useNavigate()
 
-      // Login
-      /*function login(userData){
-         if(userData.password === DEMO_CREDENTIALS.password && userData.username === DEMO_CREDENTIALS.username){
-            setAccess(true);
-            navigate('/home')
-         }
-      }*/
+   // Login
+   function login(userData){
+      if(userData.username !== DEMO_CREDENTIALS.username) return 'Invalid username'
+      if(userData.password !== DEMO_CREDENTIALS.password) return 'Invalid password'
+      setAccess(true);
+      navigate('/home');
+      return null;
+   }
 
-      function login(userData){
-         if(userData.username !== DEMO_CREDENTIALS.username) return 'Invalid username'
-         if(userData.password !== DEMO_CREDENTIALS.password) return 'Invalid password'
-         setAccess(true);
-         navigate('/home');
-         return null;
-      }
+   // Automatic logout
+   useEffect(() => {
+      !access && navigate('/');
+   }, [access]);
 
-      // Automatic logout
-      useEffect(() => {
-         !access && navigate('/');
-      }, [access]);
+   // Logout
+   function logout(){
+      setAccess(false);
+      navigate('/')
+   }
 
-      // Logout
-      function logout(){
-         setAccess(false);
-         navigate('/')
-      }
+   // free pass
+   const freepass = () => {
+      setAccess(true)
+      navigate('/home')
+   }
 
-      // free pass
-      const freepass = () => {
-         setAccess(true)
-         navigate('/home')
-      }
 
-   // Función onSearch BORRAR
-   /* function onSearch(id) {
-      if(!id) return alert('Ingresa un ID')
-      if(characters.some(char => char.id == id)) {
-         alert('¡Este personaje ya ha sido llamado!');
-         return;
-      }
-      
-      axios(`${CHAR_URL}/${id}`)
-      .then(
-         ({ data }) => {
-            if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            } else {
-               window.alert('¡No hay personajes con este ID!');
-            }
-         }
-      )
-      .catch(error => {
-         alert('¡No hay personajes con este ID!')
-      })
-   } */
+   // onSearch
    const onSearch = (id) => {
       if(!id){
          /* alert('Invalid ID'); */
@@ -147,43 +120,25 @@ function App() {
          handlePopUp(messages.error3)
       }
    };
+   
 
-   // Función onRandom BORRAR
-   /* const onRandom = () => {
-      let randomId;
-      do{
-         randomId = Math.floor(Math.random() * 826) + 1
-      } while (characters.some(char => char.id == randomId))
-      if (characters.some(char => char.id === randomId)) {
-          alert('¡Este personaje ya ha sido llamado!');
-          return;
-      }
-
-      axios(`https://rickandmortyapi.com/api/character/${randomId}`)
-          .then(({ data }) => {
-              if (data.name) {
-                  onSearch(randomId); // Llamar a la función onSearch con el ID aleatorio
-              } else {
-                  alert('¡No hay personajes con este ID!');
-              }
-          })
-          .catch(error => {
-              alert('Error al buscar personaje aleatorio');
-          });
-     }; */
+   // onRandom
    const onRandom = () => {
-      let randomId;
-      let totalCharacters = allCharacters.length;
-      if(characters.length === totalCharacters){
-         /* alert("Characters limit reached") */
-         handlePopUp(messages.error1)
-         return;
-      }
-      do{
-         randomId = Math.floor(Math.random() * totalCharacters) + 1
-      } while (characters.some(char => char.id == randomId))
-      onSearch(randomId)
+     const available = allCharacters.filter(
+       char => !characters.some(c => c.id === char.id)
+     );
+
+     if (available.length === 0) {
+       handlePopUp(messages.error1);
+       return;
+     }
+
+     const randomChar =
+       available[Math.floor(Math.random() * available.length)];
+
+     setCharacters(prev => [...prev, randomChar]);
    };
+
 
 
    // Función clearAll
@@ -208,6 +163,7 @@ function App() {
 
    // return -----------------------------------------------------
    return (
+
       <div className='App'>
          
          {alertActive && <PopUp handlePopUp={handlePopUp} message={popupMessage}/>}
