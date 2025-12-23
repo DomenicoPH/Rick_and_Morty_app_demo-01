@@ -9,13 +9,6 @@
     border-right: 1px solid grey;
 }
 
-.indicador{
-    font-family: 'archivo';
-    font-size: 2rem;
-    letter-spacing: .4rem;
-    color: yellowgreen;
-}
-
 .container input{
     background-color: yellowgreen;
     height: 35px;
@@ -36,10 +29,27 @@
     padding: 0 10px;
     margin-left: 2px;
 }
+input{
+    max-width: 75px;
+    font-family: 'museo';
+    border: none;
+    outline: none;
+}
 input::placeholder{
     color: rgba(128, 128, 128, 0.45);
-    font-family: 'rym';
-    font-size: 1rem;
+    font-family: 'archivo';
+    font-size: 1.5rem;
+}
+.input:focus{
+    background-color: yellowgreen;
+    outline: none;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px yellowgreen inset !important;
+    -webkit-text-fill-color: rgb(67, 18, 114) !important;
 }
 
 @media screen and (max-width: 1500px){
