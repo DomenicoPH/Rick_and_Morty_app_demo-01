@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Form from './components/Form/Form.jsx';
+import Login from './components/Login/Login.jsx';
 import Error from './views/Error/Error.jsx';
 import About from './views/About/About.jsx';
 import Nav from './components/Nav/Nav.jsx';
@@ -46,7 +46,7 @@ function App() {
          <Routes>
             <Route 
                exact path='/'
-               element={<Form 
+               element={<Login 
                   login={login} 
                   handlePopUp={handlePopUp}
                   useDemoCredentials={useDemoCredentials}

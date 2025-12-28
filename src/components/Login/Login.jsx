@@ -1,5 +1,5 @@
 import validation from "./validation";
-import style from "./Form.module.css";
+import style from "./Login.module.css";
 import { useEffect, useState } from "react";
 import { Modal } from "../Modal/Modal";
 import rym from "../../assets/img/rym.svg";
@@ -10,7 +10,7 @@ import { SiVite, SiRedux } from "react-icons/si";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { FaKey } from "react-icons/fa";
 
-const Form = ({
+const Login = ({
   login,
   useDemoCredentials,
   demoUser,
@@ -164,4 +164,4 @@ const Form = ({
   );
 };
 
-export default Form;
+export default Login;
