@@ -18,10 +18,16 @@
 .rymlogo{
     width: 350px;
     margin: auto;
-
 }
+@media screen and (max-width: 920px){
+    .rymlogo{
+        width: 250px;
+    }
+}
+
 .rymlogosub{
     font-family: 'museo';
+    font-size: 1.5rem;
     font-weight: 400;
     text-shadow: 0px 0px 5px yellowgreen;
     color: #42b4ca;
@@ -29,6 +35,12 @@
     margin-bottom: 25px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(172, 255, 47, 0.2);
+}
+@media screen and (max-width: 920px){
+    .rymlogosub{
+        font-size: 1rem;
+        font-weight: 300;
+    }
 }
 
 .form{
@@ -74,6 +86,12 @@
     text-shadow: 0px 0px 10px blueviolet;
     user-select: none;
     text-transform: uppercase;
+}
+@media screen and (max-width: 920px){
+    .label{
+        margin-left: -24px;
+        margin-bottom: 5px;
+    }
 }
 .input{
     background-color: yellowgreen;
@@ -176,6 +194,12 @@
     padding: 25px 0;
     margin: 0;
 }
+@media screen and (max-width: 920px){
+    .credits{
+        font-size: .7rem;
+        padding: 25px;
+    }
+}
 
 /* Modal */
 .modal_div_p{
@@ -219,9 +243,6 @@
 }
 
 @media screen and (max-width: 920px){
-    .rymlogo{
-        width: 350px;
-    }
     .form{
         width: 300px;
     }

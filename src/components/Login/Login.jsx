@@ -3,7 +3,7 @@ import style from "./Login.module.css";
 import { useEffect, useState } from "react";
 import { Modal } from "../Modal/Modal";
 import rym from "../../assets/img/rym.svg";
-import Morty from "../../assets/img/morty.svg?react";
+//import Morty from "../../assets/img/morty.svg?react";
 //import Rick from '../../assets/img/rick.svg?react'
 import { FaReact } from "react-icons/fa";
 import { SiVite, SiRedux } from "react-icons/si";
@@ -76,7 +76,7 @@ const Login = ({
           <h2 className={style.rymlogosub}>Characters App</h2>
 
           <div className={style.block}>
-            <label className={style.label} htmlFor="">
+            <label className={style.label} htmlFor="username">
               Username:{" "}
             </label>
             <input
@@ -93,7 +93,7 @@ const Login = ({
           </span>
 
           <div className={style.block}>
-            <label className={style.label} htmlFor="">
+            <label className={style.label} htmlFor="password">
               Password:{" "}
             </label>
             <input
