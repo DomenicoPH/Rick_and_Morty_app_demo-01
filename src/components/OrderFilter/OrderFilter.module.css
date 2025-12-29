@@ -1,17 +1,24 @@
 .container{
     display: flex;
     width: 100%;
+    background-color: rgba(46, 35, 58, .25);
+    border-radius: 15px;
+    margin-top: -15px;
+    margin-bottom: 5px;
 }
+@media screen and (max-width: 920px){
+    .container{
+        padding-top: 20px;
+    }
+}
+
 .filterAndOrderContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    padding-bottom: 20px;
+    padding: 10px;
 }
-
-.orderContainer{}
-
-.filterContainer{}
 
 .select{
     background-color: rgb(46, 35, 58);
@@ -34,10 +41,4 @@
     font-size: 1.5rem;
     color: yellowgreen;
     width: 50px;
-}
-
-@media screen and (max-width: 920px){
-    .container{
-        padding-top: 30px;
-    }
 }

@@ -13,7 +13,7 @@ export default function Cards({characters, onClose}) {
    const filtered = useSelector(state => state.filtered)
 
    return (
-      <div className={style.superContainer}>
+      <div className={location.pathname === '/favorites' && style.superContainer}>
 
          {location.pathname === '/home' && characters.length === 0 && <div className={style.spacerHome}></div>}
          {location.pathname === '/favorites' && characters.length === 0 && <div className={style.spacerFav}></div>}

@@ -32,8 +32,6 @@ const OrderFilter = (props) => {
                     </select>
                 </div>
     
-                <div className={style.count}>{favoritesCount}</div>
-    
                 <div className={style.filterContainer}>
                     <select className={style.select} onChange={handleFilter}>
                         <option value="All">All</option>
@@ -43,6 +41,8 @@ const OrderFilter = (props) => {
                         <option value="unknown">Unknown</option>
                     </select>
                 </div>
+
+                <div className={style.count}>{favoritesCount}</div>
     
             </div>
         </div>
