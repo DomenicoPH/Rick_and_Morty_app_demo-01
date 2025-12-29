@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import Cards from "../../components/Cards/Cards"
 import { resetFavorites } from "../../redux/actions"
 import style from "./Favorites.module.css"
+import Footer from "../../components/Footer/Footer"
 //Redux
 import { connect } from "react-redux"
 
@@ -14,6 +15,7 @@ const Favorites = ({filtered, favorites, resetFavorites}) => {
     return(
         <div className={style.container}>
             <Cards characters={filtered}/>
+            <Footer />
         </div>
     )
 }

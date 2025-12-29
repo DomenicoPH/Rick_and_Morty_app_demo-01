@@ -3,6 +3,7 @@ import OrderFilter from '../OrderFilter/OrderFilter';
 import style from '../Cards/Cards.module.css'
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import CardsEmpty from './CardsEmpty';
 
 const logo = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428822/rick_and_morty/rmlogo_dxntuf.png'
 
@@ -17,10 +18,8 @@ export default function Cards({characters, onClose}) {
          {location.pathname === '/home' && characters.length === 0 && <div className={style.spacerHome}></div>}
          {location.pathname === '/favorites' && characters.length === 0 && <div className={style.spacerFav}></div>}
          {location.pathname === '/favorites' && filtered.length === 0 && <OrderFilter filtered={characters}/>}
-         <div className={characters.length === 0 ? style.logo : style.hidden}>
-            <img className={style.logoimage} src={logo} alt='Rick & Morty Logo' />
-            <h1 className={style.logotext}>Character Searching Engine</h1>
-         </div>
+
+         <CardsEmpty characters={characters} /> {/* Se carga si no hay characters cargados */}
 
          <div className={characters.length === 0 ? style.hidden : ''}>
             <div className={style.container}>

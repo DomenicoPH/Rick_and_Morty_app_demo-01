@@ -8,6 +8,8 @@
     padding: 5px;
     margin: 2.5px;
     width: 200px;
+    height: 245px;
+    max-height: 245px;
     transition: background-color .3s ease;
 }
 .container:hover, .container:hover .cardImg{
@@ -25,6 +27,8 @@
     padding: 5px;
     margin: 2.5px;
     width: 200px;
+    height: 245px;
+    max-height: 245px;
     transition: background-color .3s ease;
 }
 .containerFavorite:hover, .containerFavorite:hover .cardImg  {
