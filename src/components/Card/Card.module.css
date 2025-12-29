@@ -6,7 +6,7 @@
     border: 1px solid yellowgreen;
     border-radius: 10px;
     padding: 5px;
-    margin: 2.5px;
+    margin: .5px;
     width: 200px;
     height: 245px;
     max-height: 245px;
@@ -25,7 +25,7 @@
     border: 1px solid yellowgreen;
     border-radius: 10px;
     padding: 5px;
-    margin: 2.5px;
+    margin: .5px;
     width: 200px;
     height: 245px;
     max-height: 245px;
@@ -105,7 +105,6 @@
 }
 
 .cardImg{
-    display: flex;
     margin: 10px auto;
     border-radius: 500px;
     width: 150px;
@@ -116,38 +115,52 @@
 
 
 @media screen and (max-width: 920px){
-    .container{
-        flex-direction: row-reverse;
+    .container, .containerFavorite{
+        flex-direction: row;
         align-items: center;
         min-width: 100vw;
-        margin: 0px;
+        height: 125px;
     }
-    .containerFavorite{
-        flex-direction: row-reverse;
-        align-items: center;
-        min-width: 100vw;
-        margin: 0px;
-    }
+
     .topContainer{
-        flex-direction: column;
+        order: 3;
+        display: grid;
+        grid-template-areas:
+          "fav close"
+          "id id";
+        grid-column-gap: 6px;
+        grid-row-gap: 4px;
         border: none;
-        margin: 8px;
+        padding-right: 100px;
+    }
+    .cardTitleId{
+        grid-area: id;
+        text-align: center;
+        font-size: 1.2rem;
     }
     .cardClose, .cardFav{
-        min-height: 45px;
-        min-width: 45px;
-        max-height: 45px;
-        max-width: 45px;
-        border-radius: 100px;
+        min-height: 25px;
+        min-width: 25px;
+        max-height: 25px;
+        max-width: 25px;
+        border-radius: 999px;
+    }
+    .cardFav{
+        grid-area: fav;
+    }
+    .cardClose{
+        grid-area: close;
     }
     .cardDataName{
-        margin-left: 25px;
-        min-width: 200px;
-        max-width: 200px;
-        font-weight: bolder;
+        order: 2;
+        margin-left: 15px;
+        min-width: 180px;
+        max-width: 180px;
+        font-weight: bold;
     }
     .cardImg{
+        order: 1;
         width: 100px;
-        height: 100px;
+        margin-left: 20px;
     }
 }

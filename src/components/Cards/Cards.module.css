@@ -17,6 +17,7 @@
 @media screen and (min-width: 920px){
     .container{
       padding-top: 75px;
+      height: calc(100vh - 150px);
       max-height: calc(100vh - 75px);
     }
 }
@@ -33,7 +34,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 75vh;
+  
+}
+@media screen and (min-width: 920px){
+  .logo{
+    min-height: 75vh;
+  }
 }
 .logoimage {
   height: 500px;

@@ -6,13 +6,19 @@
     background-color: rgba(2, 6, 23, 0.5);
     padding: 25px;
     margin: 0;
-    position: absolute;
-    bottom: 0px;
-    min-width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 @media screen and (min-width: 920px){
     .credits{
         font-size: 1rem;
         padding: 25px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
     }
 }
