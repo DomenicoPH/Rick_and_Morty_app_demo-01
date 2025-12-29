@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
-
+import { RiLogoutCircleRLine } from "react-icons/ri";
 import style from './NavSimple.module.css'
-import powerOff from '../../assets/img/powerOff.svg'
 
 export default function NavSimple(props){
     return (
@@ -12,8 +11,8 @@ export default function NavSimple(props){
 
                 <div className={style.searchBarAndCount}>
                     <SearchBar onSearch={props.onSearch}/>
-                    <div className={style.count}>{props.charactersCount}</div>
-                    <button onClick={props.logout} className={style.botonLogOut}><img src={powerOff} alt="Log out"/></button>
+                    <div className={props.charactersCount === 826 ? style.countLimit : style.count}>{props.charactersCount}</div>
+                    <button onClick={props.logout} className={style.botonLogOut}><RiLogoutCircleRLine /></button>
                 </div>
 
                 <div className={style.links}>

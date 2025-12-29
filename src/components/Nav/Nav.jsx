@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import style from './Nav.module.css'
 import logo from '../../assets/img/rmlogo.png'
-import powerOff from '../../assets/img/powerOff.svg'
+import { RiLogoutCircleRLine } from "react-icons/ri";
 
 export default function Nav(props){
     return (
@@ -32,10 +32,7 @@ export default function Nav(props){
             </div>
 
             <div className={style.right}>
-
-                <button onClick={props.logout} className={style.botonLogOut}><img src={powerOff} alt="Log out"/></button>
-                <p className={style.logout}>Log Out</p>
-
+                <button onClick={props.logout} className={style.botonLogOut}><RiLogoutCircleRLine /></button>
             </div>
 
         </div>
