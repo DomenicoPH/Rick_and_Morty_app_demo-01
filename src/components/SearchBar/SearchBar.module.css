@@ -3,10 +3,8 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    width: 300px;
+    width: 175px;
     height: 45px;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
 }
 
 .container input{
@@ -50,14 +48,4 @@ input::placeholder{
 .input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px yellowgreen inset !important;
     -webkit-text-fill-color: rgb(67, 18, 114) !important;
-}
-
-@media screen and (max-width: 1500px){
-    .container{
-        border: none;
-        width: auto;
-    }
-    .indicador{
-        display: none;
-    }
 }

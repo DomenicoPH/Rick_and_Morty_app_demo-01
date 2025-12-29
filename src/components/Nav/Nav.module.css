@@ -18,17 +18,30 @@
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    font-family: 'archivo';
+    font-family: 'museo';
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    color: black;
+    margin: 0px 10px;
+    width: 60px;
+}
+
+.countLimit{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'museo';
     font-size: 2rem;
     letter-spacing: .4rem;
     color: yellowgreen;
-    margin: 0px 5px;
-    width: 250px;
+    margin: 0px 10px;
+    width: 60px;
 }
 
 .middle{
     display: flex;
     align-items: center;
+    gap: 2px;
 }
 .right{
     display: flex;
@@ -46,9 +59,8 @@
     min-width: 100px;
     max-width: 100px;
     padding: 0 10px;
-    margin: 0px 10px;
     user-select: none;
-    transition: background-color .5s, font-size .5s;
+    transition: background-color .3s, font-size .5s;
     cursor: pointer;
 }
 .boton:hover{
@@ -98,7 +110,7 @@
     display: block;
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1200px){
     .logo{
         display: none;
     }

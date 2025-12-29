@@ -1,0 +1,18 @@
+.credits{
+    color: greenyellow;
+    font-family: 'museo';
+    font-size: .7rem;
+    opacity: 0.5;
+    background-color: rgba(2, 6, 23, 0.5);
+    padding: 25px;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    min-width: 100vw;
+}
+@media screen and (min-width: 920px){
+    .credits{
+        font-size: 1rem;
+        padding: 25px 0;
+    }
+}

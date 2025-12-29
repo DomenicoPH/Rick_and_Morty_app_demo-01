@@ -7,11 +7,11 @@
     border-radius: 10px;
     padding: 5px;
     margin: 2.5px;
-    width: 150px;
-    max-width: 150px;
+    width: 200px;
+    transition: background-color .3s ease;
 }
 .container:hover, .container:hover .cardImg{
-    background-color: rgba(137, 43, 226, 0.4);
+    background-color: rgba(137, 43, 226, 0.8);
     box-shadow: 0px 0px 15px rgba(172, 255, 47, 0.5);
 }
 
@@ -24,8 +24,8 @@
     border-radius: 10px;
     padding: 5px;
     margin: 2.5px;
-    width: 150px;
-    max-width: 150px;
+    width: 200px;
+    transition: background-color .3s ease;
 }
 .containerFavorite:hover, .containerFavorite:hover .cardImg  {
     background-color: rgba(137, 43, 226, 0.8);
@@ -86,18 +86,19 @@
     border-bottom: 1px solid rgba(154, 205, 50, 0.2);
     margin: 2.5px;
 }
-    .cardDataName{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'rym';
-        font-weight: 100;
-        font-size: 1rem;
-        color: yellowgreen;
-        padding-bottom: 5px;
-        margin: 2.5px;
 
-    }
+.cardDataName{
+    font-family: 'rym';
+    font-weight: 100;
+    font-size: 1rem;
+    color: yellowgreen;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    margin: auto;
+}
 
 .cardImg{
     display: flex;

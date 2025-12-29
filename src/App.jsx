@@ -11,6 +11,8 @@ import PopUp from './components/PopUp/PopUp.jsx';
 import { useCharacters } from './hooks/useCharacters.js';
 import { useAuth } from './hooks/useAuth.js';
 import usePopUp from './hooks/usePopUp.js';
+import Footer from './components/Footer/Footer.jsx';
+import Home from './components/Home/Home.jsx';
 
 function App() {
 
@@ -56,7 +58,7 @@ function App() {
             />
             <Route 
                path='/home' 
-               element={<Cards characters={characters} onClose={onClose}/>} />
+               element={<Home characters={characters} onClose={onClose}/>} />
             <Route 
                path='/favorites'
                element={<Favorites />} />
